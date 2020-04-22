@@ -10,5 +10,15 @@ module.exports = {
     title: 'Full-Stack Bootcamp',
     author: 'J-Money'
   },
-  plugins: [`gatsby-plugin-sass`],
+  plugins: [
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/`,
+      }
+    },
+    'gatsby-transformer-remark'
+  ]
 }
